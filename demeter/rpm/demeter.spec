@@ -8,6 +8,7 @@ License: Perl artistic license
 URL: http://bruceravel.github.io/demeter/
 Source0: https://github.com/bruceravel/demeter/archive/0.9.25.tar.gz
 
+BuildRequires: epel-release
 BuildRequires: perl(Module::Build)
 BuildRequires: perl(Capture::Tiny)
 BuildRequires: perl(File::Copy::Recursive)
@@ -52,7 +53,14 @@ BuildRequires: perl(Tree::Simple)
 BuildRequires: perl(Want)
 BuildRequires: perl(XMLRPC::Lite)
 BuildRequires: perl(YAML::Tiny)
+#optional
+BuildRequires: perl(File::Monitor::Lite)
+BuildRequires: perl(Graphics::GnuplotIF)
+BuildRequires: perl(Term::Sk)
+BuildRequires: perl(Term::Twiddle)
+BuildRequires: perl(Wx)
 Requires: ifeffit
+Requires: perl(autodie)
 Requires: perl(Archive::Zip)
 Requires: perl(Capture::Tiny)
 Requires: perl(Chemistry::Elements)
@@ -91,6 +99,15 @@ Requires: perl(Tree::Simple)
 Requires: perl(Want)
 Requires: perl(XMLRPC::Lite)
 Requires: perl(YAML::Tiny)
+#optional
+Requires: perl(File::Monitor::Lite)
+Requires: perl(Graphics::GnuplotIF)
+Requires: perl(Term::Sk)
+Requires: perl(Term::Twiddle)
+Requires: perl(Wx)
+
+Provides: perl(Demeter)
+
 AutoReqProv: no
 
 %description
