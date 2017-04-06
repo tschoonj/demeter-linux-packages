@@ -28,7 +28,17 @@ Requires:       perl(Readonly)
 Requires:       perl(Template)
 Requires:       perl(URI::Escape)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
-AutoReqProv: no
+Provides:       perl(Pod::ProjectDocs)
+Provides:       perl(Pod::ProjectDocs::ArrowImage)
+Provides:       perl(Pod::ProjectDocs::CSS)
+Provides:       perl(Pod::ProjectDocs::Config)
+Provides:       perl(Pod::ProjectDocs::Doc)
+Provides:       perl(Pod::ProjectDocs::DocManager)
+Provides:       perl(Pod::ProjectDocs::File)
+Provides:       perl(Pod::ProjectDocs::IndexPage)
+Provides:       perl(Pod::ProjectDocs::Parser)
+Provides:       perl(Pod::ProjectDocs::Template)
+#AutoReqProv: no
 
 %description
 This module allows you to generates CPAN like pod pages from your modules

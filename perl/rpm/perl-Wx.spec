@@ -6,6 +6,7 @@ License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Wx/
 Source0:        http://www.cpan.org/authors/id/M/MD/MDOOTSON/Wx-%{version}.tar.gz
+Source1:	perl-Wx-provides
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  perl(Alien::wxWidgets) >= 0.25
 BuildRequires:  perl(ExtUtils::MakeMaker)
@@ -16,7 +17,7 @@ BuildRequires:  perl(Test::Harness) >= 2.26
 BuildRequires:  perl(Test::More) >= 0.45
 Requires:       perl(Alien::wxWidgets) >= 0.25
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
-Provides:       perl(Wx::PlValidator)
+%(cat %{SOURCE1})
 
 %description
 The Wx module is a wrapper for the wxWidgets (formerly known as wxWindows)
