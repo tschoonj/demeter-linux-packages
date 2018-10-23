@@ -1,12 +1,12 @@
 Name: demeter
-Version: 0.9.25	
+Version: 0.9.26
 Release: 1%{?dist}
 Summary: Demeter is a comprehensive system for processing and analyzing X-ray Absorption Spectroscopy data.	
 
 Group: Applications/Engineering and Scientific 
 License: Perl artistic license
 URL: http://bruceravel.github.io/demeter/
-Source0: https://github.com/bruceravel/demeter/archive/0.9.25.tar.gz
+Source0: https://github.com/bruceravel/demeter/archive/0.9.26.tar.gz
 
 BuildRequires: epel-release
 BuildRequires: perl(Module::Build)
@@ -42,9 +42,11 @@ BuildRequires: perl(MooseX::Aliases)
 BuildRequires: perl(MooseX::Types)
 BuildRequires: perl(MooseX::Types::LaxNum)
 BuildRequires: perl(PDL)
+BuildRequires: perl(PDL::Stats)
 BuildRequires: perl(Pod::POM)
 BuildRequires: perl(Regexp::Assemble)
 BuildRequires: perl(Regexp::Common)
+BuildRequires: perl(RPC::XML::Client)
 BuildRequires: perl(Spreadsheet::WriteExcel)
 BuildRequires: perl(Statistics::Descriptive)
 BuildRequires: perl(Text::Template)
@@ -88,9 +90,11 @@ Requires: perl(MooseX::Aliases)
 Requires: perl(MooseX::Types)
 Requires: perl(MooseX::Types::LaxNum)
 Requires: perl(PDL)
+Requires: perl(PDL::Stats)
 Requires: perl(Pod::POM)
 Requires: perl(Regexp::Assemble)
 Requires: perl(Regexp::Common)
+Requires: perl(RPC::XML::Client)
 Requires: perl(Spreadsheet::WriteExcel)
 Requires: perl(Statistics::Descriptive)
 Requires: perl(Text::Template)
@@ -140,11 +144,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %{perl_vendorarch}/*
-%{_mandir}/man3/*
-%{_mandir}/man1/*
+#%{_mandir}/man3/*
+#%{_mandir}/man1/*
 %{_bindir}/*
 
 
 %changelog
+* Mon Oct 22 2018 Tom Schoonjans
+- Update to 0.9.26
 * Thu Apr 06 2017 Tom Schoonjans 
 - Initial version of the SPEC file 
